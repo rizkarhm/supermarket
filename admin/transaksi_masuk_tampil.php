@@ -5,7 +5,7 @@
 
 <h3><span class="glyphicon glyphicon-import"></span> Detail Transaksi Masuk</h3>
 <a class="btn" href="transaksi_masuk.php"><span class="glyphicon glyphicon-arrow-left"></span> Kembali</a>
-
+<a style="margin-bottom:10px" href="cetak_transaksi_masuk_detail.php" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span> Cetak</a>
 <table class="table table-hover">
     <tr>
         <th class="col-md-2"><center>Kode Barang</th>
