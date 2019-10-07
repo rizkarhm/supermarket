@@ -59,6 +59,8 @@
             </tr>
     </table>
 
+    <a style="margin-bottom:10px" href="cetak_barang.php" target="_blank" class="btn btn-default pull-right"><span
+    class='glyphicon glyphicon-print'></span> Cetak</a>
     <form action="barang_search.php" method="get">
         <div class="input-group col-md-5 col-md-offset-7">
             <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search"></span></span>

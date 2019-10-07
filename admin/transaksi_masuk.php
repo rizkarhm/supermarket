@@ -63,6 +63,22 @@
                 name="cari">
         </div>
     </form>
+    <!-- <form action="" method="get">
+        <div class="input-group col-md-5 col-md-offset-7">
+            <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-calendar"></span></span>
+            <select type="submit" name="tanggal" class="form-control" onchange="this.form.submit()">
+                <option>Pilih Tanggal</option>
+                <?php
+                $pil = mysqli_query($koneksi, "select tgl_masuk from tblbrgmasuk order by tgl_masuk desc");
+                while ($p = mysqli_fetch_array($pil)) {
+                    ?>
+                    <option><?php echo $p['tgl_masuk'] ?></option>
+                <?php
+                }
+                ?>
+            </select>
+        </div>
+    </form> -->
     <br />
 
     <table class="table table-hover">
