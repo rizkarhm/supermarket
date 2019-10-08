@@ -5,6 +5,7 @@ Feature :
 4. Search Data
 5. Delete Data
 6. Transaksi
+7. Cetak to .pdf
 
 Nb : 
 Login Admin ->
