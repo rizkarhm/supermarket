@@ -8,6 +8,6 @@
     $password=$_POST['password'];
     
 
-    mysqli_query($connect, "insert into tblpetugas values('$id_petugas','$nama_petugas', '$alamat', '$email', '$telepon', '$password')");
+    mysqli_query($connect, "insert into tblpetugas values('$id_petugas','$nama_petugas', '$alamat', '$email', '$telepon', MD5('$password'))");
     header("location:petugas_data.php");
 ?>

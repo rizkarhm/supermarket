@@ -63,7 +63,7 @@
         $password      = $_POST['password'];
 
         // update user data
-        $petugas = mysqli_query($connect, "update tblpetugas set nama_petugas='$nama_petugas', alamat='$alamat',  email='$email', telepon='$telepon', password='$password' where id_petugas='$id_petugas'");
+        $petugas = mysqli_query($connect, "update tblpetugas set nama_petugas='$nama_petugas', alamat='$alamat',  email='$email', telepon='$telepon', password=MD5('$password') where id_petugas='$id_petugas'");
 
        header("location:petugas_data.php");
     }    

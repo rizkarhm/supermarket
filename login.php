@@ -3,9 +3,9 @@
 	session_start();
 	$username = $_POST['user'];
 	$password = $_POST['pass'];
-	//$pass = md5($password);
+	$pass = md5($password);
 
-	$query = mysqli_query($connect, "select * from tblpetugas where nama_petugas='$username' and password='$password'") or die(mysqli_connect_error());
+	$query = mysqli_query($connect, "select * from tblpetugas where nama_petugas='$username' and password='$pass'") or die(mysqli_connect_error());
 
 	if (mysqli_num_rows($query) == 1) {
 		$_SESSION['user'] = $username;
