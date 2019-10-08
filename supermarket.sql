@@ -273,11 +273,13 @@ CREATE TABLE `tblpetugas` (
 --
 
 INSERT INTO `tblpetugas` (`id_petugas`, `nama_petugas`, `alamat`, `email`, `telepon`, `password`) VALUES
-('P001', 'Toni Bimantara', 'Jl.Raya Langsep', 'tonibimantara123@yahoo.coom', '08896745762', MD5(MD5('12345')),
-('P002', 'bimantara', 'jl.langsep', 'bimantara123@yahoo.coom', '08892882762', MD5('12345')),
-('P003', 'kirana citra', 'jl.kedawung no 6', 'kirana123@yahoo.com', '085455679234', MD5('12345')),
-('P004', 'muhammad andi', 'jl.padepokan', 'mhmdandi@gmail.com', '08123356478', MD5('12345')),
-('P005', 'silvi azzahra', 'jl.bumi palapa', 'silviazzahra@gmail.com', '08768332786', MD5('12345'));
+('P001', 'Toni Bimantara', 'Jl.Raya Langsep', 'tonibimantara123@yahoo.coom', '08896745762', '827ccb0eea8a706c4c34a16891f84e7b'),
+('P002', 'bimantara', 'jl.langsep', 'bimantara123@yahoo.coom', '08892882762', '827ccb0eea8a706c4c34a16891f84e7b'),
+('P003', 'kirana citra', 'jl.kedawung no 6', 'kirana123@yahoo.com', '085455679234', '827ccb0eea8a706c4c34a16891f84e7b'),
+('P004', 'muhammad andi', 'jl.padepokan', 'mhmdandi@gmail.com', '08123356478', '827ccb0eea8a706c4c34a16891f84e7b'),
+('P005', 'silvi azzahra', 'jl.bumi palapa', 'silviazzahra@gmail.com', '08768332786', '827ccb0eea8a706c4c34a16891f84e7b'),
+('P006', 'Rizka', 'Jl. Singosari', 'rizkarahma67@gmail.com', '0878519680', 'e10adc3949ba59abbe56e057f20f883e'),
+('P007', 'Artan', 'Jl. Batu', 'artan@gmail.com', '0881703849777', '827ccb0eea8a706c4c34a16891f84e7b');
 
 --
 -- Indexes for dumped tables
