@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2019 at 03:34 PM
+-- Generation Time: Oct 08, 2019 at 04:23 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -43,10 +43,10 @@ CREATE TABLE `tblbarang` (
 
 INSERT INTO `tblbarang` (`kode_barang`, `nama_barang`, `kode_jenis`, `harga_net`, `harga_jual`, `stok`) VALUES
 ('B001', 'Astor', 'J002', '500', '1000', '5'),
-('B002', 'Buku Tulis', 'J003', '2000', '2500', '0'),
-('B003', 'Baju Renang', 'J004', '50000', '60000', '8'),
-('B004', 'Minyak Goreng', 'J001', '12000', '15000', '5'),
-('B005', 'Toner', 'J005', '12500', '15000', '5');
+('B002', 'Buku Tulis', 'J003', '2000', '2500', '6'),
+('B003', 'Baju Renang', 'J004', '50000', '60000', '5'),
+('B004', 'Minyak Goreng', 'J001', '12000', '15000', '6'),
+('B005', 'Toner', 'J005', '12500', '15000', '3');
 
 -- --------------------------------------------------------
 
@@ -67,7 +67,8 @@ CREATE TABLE `tblbrgmasuk` (
 --
 
 INSERT INTO `tblbrgmasuk` (`no_nota`, `tgl_masuk`, `id_distributor`, `id_petugas`, `total`) VALUES
-('NOTA001', '2019-10-25', 'D003', 'P002', 250000);
+('NOTA001', '2019-10-04', 'D003', 'P002', 114000),
+('NOTA002', '2019-10-01', 'D002', 'P002', 10000);
 
 --
 -- Triggers `tblbrgmasuk`
@@ -97,7 +98,10 @@ CREATE TABLE `tbldetailbrgmasuk` (
 --
 
 INSERT INTO `tbldetailbrgmasuk` (`no_nota`, `kode_barang`, `jumlah`, `subtotal`) VALUES
-('NOTA001', 'B003', '5', '250000');
+('NOTA001', 'B002', '1', '2000'),
+('NOTA001', 'B003', '2', '100000'),
+('NOTA001', 'B004', '1', '12000'),
+('NOTA002', 'B002', '5', '10000');
 
 --
 -- Triggers `tbldetailbrgmasuk`
@@ -141,7 +145,8 @@ CREATE TABLE `tbldetailpenjualan` (
 --
 
 INSERT INTO `tbldetailpenjualan` (`no_faktur`, `kode_barang`, `jumlah`, `subtotal`) VALUES
-('TRX001', 'B003', '3', '150000');
+('TRX001', 'B003', '3', '150000'),
+('TRX002', 'B005', '2', '25000');
 
 --
 -- Triggers `tbldetailpenjualan`
@@ -235,7 +240,8 @@ CREATE TABLE `tblpenjualan` (
 --
 
 INSERT INTO `tblpenjualan` (`no_faktur`, `tgl_penjualan`, `id_petugas`, `bayar`, `sisa`, `total`) VALUES
-('TRX001', '2019-10-06', 'P002', 158000, 2000, 150000);
+('TRX001', '2019-10-06', 'P002', 158000, 2000, 148000),
+('TRX002', '2019-10-08', 'P002', 28000, 3000, 25000);
 
 --
 -- Triggers `tblpenjualan`
@@ -267,7 +273,7 @@ CREATE TABLE `tblpetugas` (
 --
 
 INSERT INTO `tblpetugas` (`id_petugas`, `nama_petugas`, `alamat`, `email`, `telepon`, `password`) VALUES
-('P001', 'toni bimantara', 'jl.raya langsep', 'tonibimantara123@yahoo.coom', '08896745762', '12345'),
+('P001', 'Toni Bimantara', 'Jl.Raya Langsep', 'tonibimantara123@yahoo.coom', '08896745762', '12345'),
 ('P002', 'bimantara', 'jl.langsep', 'bimantara123@yahoo.coom', '08892882762', '12345'),
 ('P003', 'kirana citra', 'jl.kedawung no 6', 'kirana123@yahoo.com', '085455679234', '12345'),
 ('P004', 'muhammad andi', 'jl.padepokan', 'mhmdandi@gmail.com', '08123356478', '12345'),

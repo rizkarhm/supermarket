@@ -1,10 +1,13 @@
 <?php
     include 'header.php';
     include 'config.php';
+    $no_faktur = mysqli_real_escape_string($connect, $_GET['no_faktur']);
 ?>
 
 <h3><span class="glyphicon glyphicon-import"></span> Detail Transaksi Keluar</h3>
 <a class="btn" href="transaksi_keluar.php"><span class="glyphicon glyphicon-arrow-left"></span> Kembali</a>
+
+<a style="margin-bottom:10px" href="cetak_transaksi_keluar_detail.php?no_faktur=<?php echo $no_faktur; ?>" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span> Cetak</a>
 
 <table class="table table-hover">
     <tr>
@@ -16,8 +19,7 @@
         <th class="col-md-2"><center>Opsi</center></th>
     </tr>
     <?php
-        $no_faktur = mysqli_real_escape_string($connect, $_GET['no_faktur']);
-        
+      
         $barang = mysqli_query($connect, "select B.kode_barang, B.nama_barang, B.harga_net, K.no_faktur, K.kode_barang, K.jumlah, K.subtotal from tblbarang B inner join tbldetailpenjualan K on B.kode_barang=K.kode_barang where K.no_faktur='$no_faktur'");
 
         while ($d = mysqli_fetch_array($barang)) {
