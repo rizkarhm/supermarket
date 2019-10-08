@@ -7,6 +7,6 @@ Feature :
 6. Transaksi
 
 Nb : 
-Login Admin
+Login Admin ->
 Username : Rizka
 Password : 123456
