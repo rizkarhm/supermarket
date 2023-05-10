@@ -12,5 +12,7 @@ Login Admin ->
 Username : Rizka
 || Password : 123456
 
-php 5
+default php 5
+can run in php 7
+
 
